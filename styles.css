@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+    background-color: #1a1a1a; /* Dark background */
+    overflow: hidden;
+    background-image: url('your-gaming-background-image.jpg'); /* Add your gaming background image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Overlay for Background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    transition: background 0.5s;
+}
+
+header:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #e63946; /* Accent color */
+    transition: color 0.5s;
+    animation: fadeInSlideDown 2s ease-in-out;
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5), 0 0 20px rgba(230, 57, 70, 0.5);
+}
+
+header:hover h1 {
+    color: #a8dadc; /* Lighter accent on hover */
+    text-shadow: 0 0 10px rgba(168, 218, 220, 0.5), 0 0 20px rgba(168, 218, 220, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e63946;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    color: #a8dadc; /* Lighter accent on hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.5s;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Portfolio Gallery Styles */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery img {
+    margin: 0.5rem;
+    width: 30%;
+    height: auto;
+    border: 3px solid #e63946; /* Red border for images */
+    transition: transform 0.3s, border-color 0.3s;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #a8dadc; /* Lighter accent on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+form label, form input, form textarea, form button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem 0;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222; /* Dark background for inputs */
+    color: #f0f0f0;
+    transition: background 0.3s, border 0.3s;
+}
+
+form input:hover, form textarea:hover {
+    background-color: #333;
+    border-color: #e63946; /* Red border on hover */
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #888;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background: #e63946; /* Red background for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+   
